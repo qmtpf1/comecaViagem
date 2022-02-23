@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | Comeca a tua viagem</title>
+  </head>
+  <body style="text-align: center">
+    <canvas id="unity-canvas" width=600 height=300 style="width: 600px; height: 300px; background: #231F20"></canvas>
+    <script src="Build/comecaViagem.loader.js"></script>
+    <script>
+      createUnityInstance(document.querySelector("#unity-canvas"), {
+        dataUrl: "Build/comecaViagem.data.unityweb",
+        frameworkUrl: "Build/comecaViagem.framework.js.unityweb",
+        codeUrl: "Build/comecaViagem.wasm.unityweb",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "LusoInfo",
+        productName: "Comeca a tua viagem",
+        productVersion: "1.0",
+        // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+        // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
+      });
+    </script>
+  </body>
+</html>
